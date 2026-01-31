@@ -5,9 +5,9 @@ import type { SiteConfig } from './types';
  * Update these values for your project
  */
 export const siteConfig: SiteConfig = {
-  siteName: 'My Astro Site',
-  siteUrl: 'https://yoursite.com',
-  description: 'Fast, clean, SEO-first Astro site',
+  siteName: 'Astro Starter Kit',
+  siteUrl: 'https://yourdomain.com',
+  description: 'A production-ready Astro starter with TypeScript, SCSS, and SEO best practices',
   author: 'Your Name',
   locale: 'en-US',
   social: {

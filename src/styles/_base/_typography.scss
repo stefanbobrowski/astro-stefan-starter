@@ -1,19 +1,46 @@
 h1, h2, h3, h4, h5, h6 {
-  margin-top: var(--space-6);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
   font-weight: var(--font-semibold);
   line-height: var(--leading-tight);
 
-  &:first-child {
-    margin-top: 0;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
-h1 { font-size: var(--text-3xl); margin-bottom: var(--space-5); }
-h2 { font-size: var(--text-2xl); margin-bottom: var(--space-4); }
-h3 { font-size: var(--text-xl); }
+h1 { 
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-6);
+}
+
+h2 { 
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-5);
+}
+
+h3 { 
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+}
+
+h4 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+
+h5, h6 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-2);
+}
 
 p {
+  margin-top: 0;
   font-size: var(--text-base);
   line-height: 1.6;
   margin-bottom: var(--space-4);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

@@ -20,10 +20,10 @@
 }
 
 // Responsive visibility
-@media (max-width: 768px) {
+@media (max-width: 768px) { // tablet and below
   .hide-mobile { display: none; }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) { // desktop and above
   .hide-desktop { display: none; }
 }

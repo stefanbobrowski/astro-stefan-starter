@@ -3,8 +3,17 @@
   margin-inline: auto;
   padding-inline: var(--space-5);
   
-  @media (max-width: 768px) {
+  @media (max-width: 768px) { // tablet and below
     padding-inline: var(--space-4);
+  }
+}
+
+// Main content needs vertical padding
+.main-content {
+  padding-block: var(--space-8);
+  
+  @media (max-width: 768px) { // tablet and below
+    padding-block: var(--space-6);
   }
 }
 

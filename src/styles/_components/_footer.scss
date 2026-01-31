@@ -71,3 +71,18 @@
     font-size: var(--text-sm);
   }
 }
+
+.footer__credit {
+  margin-top: var(--space-2);
+  
+  a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}

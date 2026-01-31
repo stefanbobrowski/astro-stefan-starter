@@ -10,10 +10,10 @@ interface Props {
 }
 
 const {
-  title = "My Astro Site",
+  title = "Astro Starter Kit",
   description = "Fast, clean, SEO-first Astro site",
   image = "/og-image.jpg",
-  siteName = "My Astro Site",
+  siteName = "Astro Starter Kit",
 } = Astro.props;
 
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
@@ -57,7 +57,7 @@ const fullImageURL = new URL(image, Astro.site || 'http://localhost:4321').href;
   <body>
     <Header siteName={siteName} />
     
-    <main class="container">
+    <main class="container main-content">
       <slot />
     </main>
     

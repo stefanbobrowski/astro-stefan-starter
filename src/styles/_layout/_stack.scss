@@ -17,5 +17,5 @@
 
 // Default gap when no modifier is used
 .stack:not([class*='gap']) {
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
