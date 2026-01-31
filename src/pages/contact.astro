@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Card from '@components/Card.astro';
+import Button from '@components/Button.astro';
+import Badge from '@components/Badge.astro';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Get in touch with us. We'd love to hear from you about your projects and ideas."
+>
+  <article class="stack prose">
+    <div class="text-center">
+      <h1 class="page-title">Get In Touch</h1>
+      <p class="lead mt-4">
+        Have questions about this starter kit? Want to collaborate? 
+        We'd love to hear from you!
+      </p>
+    </div>
+
+    <div class="grid grid--cols-2 mt-10">
+      <Card variant="elevated" padding="lg">
+        <div class="text-center">
+          <div class="icon-large">📧</div>
+          <h3 class="mb-3">Email Us</h3>
+          <p class="text-muted mb-5">
+            For general inquiries and support
+          </p>
+          <a href="mailto:stefanbobrowski1@gmail.com" class="link-accent">
+            stefanbobrowski1@gmail.com
+          </a>
+        </div>
+      </Card>
+
+      <Card variant="elevated" padding="lg">
+        <div class="text-center">
+          <div class="icon-large">💬</div>
+          <h3 class="mb-3">GitHub</h3>
+          <p class="text-muted mb-5">
+            Report issues or contribute
+          </p>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="link-accent">
+            View on GitHub
+          </a>
+        </div>
+      </Card>
+    </div>
+
+    <Card variant="bordered" padding="lg" class="mt-8">
+      <h2 class="mb-5">Contact Information</h2>
+      
+      <div class="stack stack--gap-lg">
+        <div>
+          <h4 class="flex align-center gap-2 mb-2">
+            <Badge variant="default">General</Badge>
+            General Inquiries
+          </h4>
+          <p class="text-muted">
+            For questions about using this starter kit, customization help, or general feedback.
+          </p>
+          <p class="mt-2">
+            <strong>Email:</strong> <a href="mailto:stefanbobrowski1@gmail.com" class="link-accent">stefanbobrowski1@gmail.com</a>
+          </p>
+        </div>
+
+        <div>
+          <h4 class="flex align-center gap-2 mb-2">
+            <Badge variant="info">Support</Badge>
+            Technical Support
+          </h4>
+          <p class="text-muted">
+            Need help with implementation, encountering bugs, or have technical questions?
+          </p>
+          <p class="mt-2">
+            <strong>Email:</strong> <a href="mailto:stefanbobrowski1@gmail.com" class="link-accent">stefanbobrowski1@gmail.com</a>
+          </p>
+        </div>
+
+        <div>
+          <h4 class="flex align-center gap-2 mb-2">
+            <Badge variant="success">Collaboration</Badge>
+            Business & Partnerships
+          </h4>
+          <p class="text-muted">
+            Interested in collaborating, have a project proposal, or want to hire us?
+          </p>
+          <p class="mt-2">
+            <strong>Email:</strong> <a href="mailto:stefanbobrowski1@gmail.com" class="link-accent">stefanbobrowski1@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </Card>
+
+    <Card variant="default" padding="md" class="mt-8 text-center">
+      <h3 class="mb-3">Response Time</h3>
+      <p class="text-muted">
+        We typically respond within 24-48 hours during business days.
+        For urgent matters, please mention "URGENT" in your subject line.
+      </p>
+    </Card>
+
+    <div class="text-center mt-10">
+      <p class="text-muted mb-5">
+        Want to see what you can build with this starter?
+      </p>
+      <a href="/components">
+        <Button variant="outline">Explore Components</Button>
+      </a>
+    </div>
+  </article>
+</BaseLayout>

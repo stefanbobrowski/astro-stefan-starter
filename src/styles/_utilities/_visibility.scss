@@ -1,0 +1,29 @@
+// Display utilities
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+
+// Screen reader only
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Responsive visibility
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop { display: none; }
+}

@@ -1,0 +1,93 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Card from '@components/Card.astro';
+import Button from '@components/Button.astro';
+import Divider from '@components/Divider.astro';
+---
+
+<BaseLayout
+  title="About Us"
+  description="Learn more about our Astro starter kit and how it can help you build better websites faster."
+>
+  <article class="stack prose">
+    <h1 class="page-title">About This Starter Kit</h1>
+    
+    <p class="lead">
+      A modern, production-ready Astro starter template designed to help you 
+      build fast, SEO-optimized websites with minimal setup.
+    </p>
+
+    <Divider spacing="lg" />
+
+    <section class="stack">
+      <h2>Why This Starter?</h2>
+      <p>
+        Building websites from scratch can be time-consuming. You have to set up 
+        TypeScript, configure your design system, build common components, and 
+        ensure everything is SEO-friendly. This starter kit does all of that for you.
+      </p>
+      <p>
+        Whether you're building a landing page, marketing site, documentation, or 
+        blog, this starter provides a solid foundation with best practices built-in.
+      </p>
+    </section>
+
+    <Card variant="elevated" padding="lg">
+      <h3>Key Features</h3>
+      <ul>
+        <li>⚡ <strong>Lightning Fast</strong> - Built with Astro for optimal performance</li>
+        <li>🎨 <strong>Design Token System</strong> - Consistent, scalable design</li>
+        <li>🔍 <strong>SEO Optimized</strong> - Complete meta tag system, canonical URLs, structured data, and sitemap generation</li>
+        <li>📱 <strong>Responsive</strong> - Mobile-first approach</li>
+        <li>🎯 <strong>TypeScript</strong> - Type safety and better DX</li>
+        <li>🧩 <strong>Reusable Components</strong> - Don't repeat yourself</li>
+      </ul>
+    </Card>
+
+    <section class="stack">
+      <h2>Perfect For</h2>
+      <div class="grid grid--cols-2 mt-5">
+        <Card variant="bordered" padding="md">
+          <h4>📄 Landing Pages</h4>
+          <p class="text-muted text-sm mt-2">
+            Quick, high-converting pages with excellent performance.
+          </p>
+        </Card>
+        <Card variant="bordered" padding="md">
+          <h4>🏢 Marketing Sites</h4>
+          <p class="text-muted text-sm mt-2">
+            Multi-page sites with consistent branding and SEO.
+          </p>
+        </Card>
+        <Card variant="bordered" padding="md">
+          <h4>📝 Documentation</h4>
+          <p class="text-muted text-sm mt-2">
+            Clear, accessible documentation sites.
+          </p>
+        </Card>
+        <Card variant="bordered" padding="md">
+          <h4>🚀 SaaS Websites</h4>
+          <p class="text-muted text-sm mt-2">
+            Professional product websites with modern design.
+          </p>
+        </Card>
+      </div>
+    </section>
+
+    <Divider spacing="lg" />
+
+    <section class="stack">
+      <h2>Getting Started</h2>
+      <p>
+        Clone this repository, install dependencies with <code>npm install</code>, 
+        and start the dev server with <code>npm run dev</code>. 
+        That's it! You're ready to start customizing.
+      </p>
+      <div class="mt-6">
+        <a href="/components">
+          <Button variant="primary">Explore Components</Button>
+        </a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

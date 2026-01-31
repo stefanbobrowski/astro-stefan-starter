@@ -1,0 +1,28 @@
+---
+interface Props {
+  siteName?: string;
+}
+
+const { siteName = 'Your Site' } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header__content">
+      <a href="/" class="header__logo">
+        {siteName}
+      </a>
+      
+      <nav class="header__nav">
+        <ul class="nav-list">
+          <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
+          <li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>About</a></li>
+          <li><a href="/blog" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a></li>
+          <li><a href="/components" class={currentPath === '/components' ? 'active' : ''}>Components</a></li>
+          <li><a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

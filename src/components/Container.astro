@@ -1,0 +1,12 @@
+---
+interface Props {
+  size?: "sm" | "md" | "lg" | "full";
+  as?: "div" | "section" | "article" | "main";
+}
+
+const { size = "md", as: Tag = "div" } = Astro.props;
+---
+
+<Tag class={`container container--${size}`}>
+  <slot />
+</Tag>

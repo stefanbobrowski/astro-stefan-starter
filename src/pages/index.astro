@@ -1,0 +1,94 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Button from '@components/Button.astro';
+import Card from '@components/Card.astro';
+import Badge from '@components/Badge.astro';
+---
+
+<BaseLayout
+  title="Astro Starter Kit"
+  description="A comprehensive Astro starter with TypeScript, SCSS tokens, and SEO best practices."
+>
+  <section class="hero stack">
+    <Badge variant="info">v1.0.0</Badge>
+    <h1 class="hero-title">Astro Starter Kit</h1>
+    <p class="hero-subtitle">
+      A production-ready Astro starter with TypeScript, SCSS design tokens, 
+      common components, and SEO best practices built-in.
+    </p>
+    <div class="flex gap-4 justify-center mt-6">
+      <a href="/about">
+        <Button variant="primary">Get Started</Button>
+      </a>
+      <a href="/components">
+        <Button variant="outline">View Components</Button>
+      </a>
+    </div>
+  </section>
+
+  <section class="stack section-spacing">
+    <h2 class="text-center">Features</h2>
+    <div class="grid grid--cols-3">
+      <Card variant="elevated" padding="lg">
+        <h3>🎨 Design Tokens</h3>
+        <p>
+          Comprehensive SCSS token system for colors, spacing, typography, 
+          and more. Easily customizable for your brand.
+        </p>
+      </Card>
+
+      <Card variant="elevated" padding="lg">
+        <h3>🧩 UI Components</h3>
+        <p>
+          Pre-built components like buttons, cards, badges, header, and footer. 
+          Ready to use and fully styled.
+        </p>
+      </Card>
+
+      <Card variant="elevated" padding="lg">
+        <h3>🔍 SEO Optimized</h3>
+        <p>
+          Comprehensive SEO features including structured meta tags, schema markup support, 
+          social media integration, robots.txt, and automatic sitemap generation.
+        </p>
+      </Card>
+
+      <Card variant="elevated" padding="lg">
+        <h3>⚡ TypeScript</h3>
+        <p>
+          Fully typed with TypeScript for better DX, autocomplete, 
+          and fewer bugs. Path aliases configured.
+        </p>
+      </Card>
+
+      <Card variant="elevated" padding="lg">
+        <h3>📱 Responsive</h3>
+        <p>
+          Mobile-first design with responsive layouts and utilities. 
+          Works perfectly on all screen sizes.
+        </p>
+      </Card>
+
+      <Card variant="elevated" padding="lg">
+        <h3>🚀 Performance</h3>
+        <p>
+          Built with Astro for lightning-fast performance. Zero JS by default, 
+          optimized for Core Web Vitals.
+        </p>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack section-spacing text-center">
+    <h2>Ready to Build?</h2>
+    <p class="text-muted">
+      This starter kit is perfect for landing pages, marketing sites, blogs, 
+      and any SEO-focused web project.
+    </p>
+    <div class="mt-6">
+      <a href="/contact">
+        <Button variant="primary">Start Building</Button>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

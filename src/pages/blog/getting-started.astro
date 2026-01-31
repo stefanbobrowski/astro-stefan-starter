@@ -1,0 +1,106 @@
+---
+import SEOLayout from '@layouts/SEOLayout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Badge from '@components/Badge.astro';
+import Card from '@components/Card.astro';
+import Button from '@components/Button.astro';
+---
+
+<SEOLayout
+  title="Getting Started with Astro"
+  description="Learn how to build fast, content-focused websites with Astro and this starter kit. A comprehensive guide for beginners."
+  type="article"
+  publishedTime="2026-01-28T10:00:00Z"
+  author="Stefan"
+>
+  <Header slot="header" siteName="My Astro Site" />
+  
+  <article class="prose section-spacing">
+    <div class="text-center">
+      <div class="flex gap-2 justify-center mb-4">
+        <Badge variant="info">Tutorial</Badge>
+        <Badge variant="default">Astro</Badge>
+      </div>
+      
+      <h1 class="hero-title">Getting Started with Astro</h1>
+      
+      <div class="flex gap-4 justify-center mt-4 text-sm text-muted">
+        <span>By Stefan</span>
+        <span>•</span>
+        <span>January 28, 2026</span>
+        <span>•</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+
+    <div class="stack mt-10">
+      <p class="lead">
+        Astro is a modern web framework that delivers lightning-fast performance by shipping zero JavaScript by default. 
+        This starter kit gives you everything you need to build production-ready sites.
+      </p>
+
+      <h2>Why Choose Astro?</h2>
+      <p>
+        Astro is perfect for content-focused websites like blogs, marketing sites, documentation, and portfolios. 
+        It offers exceptional performance by generating static HTML and only shipping JavaScript when you need it.
+      </p>
+
+      <Card variant="bordered" padding="lg">
+        <h3>Key Benefits</h3>
+        <ul>
+          <li><strong>Fast by Default</strong> - Zero JS unless you opt in</li>
+          <li><strong>Component Islands</strong> - Hydrate interactive components selectively</li>
+          <li><strong>Framework Agnostic</strong> - Use React, Vue, Svelte, or vanilla JS</li>
+          <li><strong>SEO Friendly</strong> - Server-side rendering and static generation</li>
+          <li><strong>TypeScript Support</strong> - Full type safety out of the box</li>
+        </ul>
+      </Card>
+
+      <h2>Setting Up Your First Project</h2>
+      <p>
+        This starter kit comes pre-configured with TypeScript, SCSS design tokens, common components, and SEO optimizations. 
+        Here's how to get started:
+      </p>
+
+      <Card variant="elevated" padding="md">
+        <h4>Installation Steps</h4>
+        <ol>
+          <li>Clone or copy this starter repository</li>
+          <li>Run <code>npm install</code></li>
+          <li>Start dev server with <code>npm run dev</code></li>
+          <li>Open <code>http://localhost:4321</code></li>
+        </ol>
+      </Card>
+
+      <h2>Project Structure</h2>
+      <p>
+        Understanding the project structure helps you navigate and customize the starter kit effectively:
+      </p>
+      <ul>
+        <li><code>src/components/</code> - Reusable Astro components</li>
+        <li><code>src/layouts/</code> - Page layout templates</li>
+        <li><code>src/pages/</code> - File-based routing</li>
+        <li><code>src/styles/</code> - SCSS with design tokens</li>
+        <li><code>src/lib/</code> - Utilities and helper functions</li>
+      </ul>
+
+      <h2>Next Steps</h2>
+      <p>
+        Now that you have the basics down, explore customizing the design tokens, creating new components, 
+        or adding your own pages. Check out the other articles to learn more!
+      </p>
+
+      <div class="flex gap-4 mt-8">
+        <a href="/blog">
+          <Button variant="outline">← Back to Blog</Button>
+        </a>
+        <a href="/blog/design-tokens">
+          <Button variant="primary">Next: Design Tokens →</Button>
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <Footer slot="footer" siteName="My Astro Site" />
+</SEOLayout>

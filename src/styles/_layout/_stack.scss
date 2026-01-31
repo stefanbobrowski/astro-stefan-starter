@@ -1,0 +1,21 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack--gap-sm {
+  gap: var(--space-2);
+}
+
+.stack--gap-md {
+  gap: var(--space-4);
+}
+
+.stack--gap-lg {
+  gap: var(--space-6);
+}
+
+// Default gap when no modifier is used
+.stack:not([class*='gap']) {
+  gap: var(--space-4);
+}

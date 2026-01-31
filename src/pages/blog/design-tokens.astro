@@ -1,0 +1,158 @@
+---
+import SEOLayout from '@layouts/SEOLayout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Badge from '@components/Badge.astro';
+import Card from '@components/Card.astro';
+import Button from '@components/Button.astro';
+import Divider from '@components/Divider.astro';
+---
+
+<SEOLayout
+  title="Design Tokens: A Complete Guide"
+  description="Understanding and customizing the SCSS design token system in this starter kit for consistent, maintainable design."
+  type="article"
+  publishedTime="2026-01-29T10:00:00Z"
+  author="Stefan"
+>
+  <Header slot="header" siteName="My Astro Site" />
+  
+  <article class="prose section-spacing">
+    <div class="text-center">
+      <div class="flex gap-2 justify-center mb-4">
+        <Badge variant="success">Design</Badge>
+        <Badge variant="default">SCSS</Badge>
+      </div>
+      
+      <h1 class="hero-title">Design Tokens: A Complete Guide</h1>
+      
+      <div class="flex gap-4 justify-center mt-4 text-sm text-muted">
+        <span>By Stefan</span>
+        <span>•</span>
+        <span>January 29, 2026</span>
+        <span>•</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+
+    <div class="stack mt-10">
+      <p class="lead">
+        Design tokens are the foundation of a scalable design system. This starter kit includes a comprehensive 
+        token system for colors, spacing, typography, and more—all easily customizable.
+      </p>
+
+      <h2>What Are Design Tokens?</h2>
+      <p>
+        Design tokens are named entities that store visual design attributes. Instead of hardcoding values like 
+        <code>#d4af37</code> or <code>16px</code>, 
+        you use semantic names like <code>var(--accent)</code> or <code>var(--space-4)</code>.
+      </p>
+
+      <Card variant="bordered" padding="lg">
+        <h3>Benefits of Design Tokens</h3>
+        <ul>
+          <li><strong>Consistency</strong> - Same values used everywhere</li>
+          <li><strong>Maintainability</strong> - Update once, change everywhere</li>
+          <li><strong>Scalability</strong> - Easy to add themes or variations</li>
+          <li><strong>Communication</strong> - Shared language between design and dev</li>
+        </ul>
+      </Card>
+
+      <h2>Token Categories</h2>
+      <p>
+        This starter organizes tokens into logical categories in the <code>src/styles/_tokens/</code> directory:
+      </p>
+
+      <h3>Colors</h3>
+      <p>Color tokens in <code>_colors.scss</code>:</p>
+      <Card variant="elevated" padding="md">
+        <div class="grid grid--cols-2 gap-3 mt-3">
+          <div class="p-3">
+            <code>--bg</code>
+          </div>
+          <div class="p-3">
+            <code>--bg-muted</code>
+          </div>
+          <div class="p-3">
+            <code>--bg-elevated</code>
+          </div>
+          <div class="p-3">
+            <code>--accent</code>
+          </div>
+        </div>
+      </Card>
+
+      <Divider spacing="md" />
+
+      <h3>Spacing</h3>
+      <p>A consistent spacing scale in <code>_spacing.scss</code>:</p>
+      <Card variant="elevated" padding="md">
+        <div class="stack stack--gap-sm mt-3">
+          <div class="flex align-center gap-3">
+            <code class="text-sm">--space-1</code>
+            <span class="text-sm text-muted">4px</span>
+          </div>
+          <div class="flex align-center gap-3">
+            <code class="text-sm">--space-4</code>
+            <span class="text-sm text-muted">16px</span>
+          </div>
+          <div class="flex align-center gap-3">
+            <code class="text-sm">--space-8</code>
+            <span class="text-sm text-muted">64px</span>
+          </div>
+        </div>
+      </Card>
+
+      <Divider spacing="md" />
+
+      <h3>Typography</h3>
+      <p>Font sizes, weights, and line heights:</p>
+      <Card variant="elevated" padding="md">
+        <div class="mt-3">
+          <p class="text-xs mb-2"><code>--text-xs</code> - Extra small text</p>
+          <p class="text-sm mb-2"><code>--text-sm</code> - Small text</p>
+          <p class="mb-2"><code>--text-base</code> - Base text</p>
+          <p class="text-lg mb-2"><code>--text-lg</code> - Large text</p>
+          <p class="text-xl mb-2"><code>--text-xl</code> - Extra large text</p>
+        </div>
+      </Card>
+
+      <h2>Customizing Tokens</h2>
+      <p>
+        To customize tokens for your brand, edit the files in <code>src/styles/_tokens/</code>. 
+        Changes will automatically propagate throughout the entire application.
+      </p>
+
+      <Card variant="bordered" padding="lg">
+        <h4>Example: Changing Brand Colors</h4>
+        <p class="mt-3 text-sm">
+          Edit <code>src/styles/_tokens/_colors.scss</code>:
+        </p>
+        <pre class="mt-3"><code>{`:root {
+  --accent: #3b82f6; /* Change to your brand color */
+  --accent-hover: #2563eb;
+}`}</code></pre>
+      </Card>
+
+      <h2>Using Tokens in Your Code</h2>
+      <p>
+        Reference tokens using CSS custom properties in your SCSS files:
+      </p>
+      <pre><code>{`.my-element {
+  padding: var(--space-4);
+  color: var(--accent);
+}`}</code></pre>
+
+      <div class="flex gap-4 mt-8">
+        <a href="/blog/getting-started">
+          <Button variant="outline">← Previous: Getting Started</Button>
+        </a>
+        <a href="/blog/seo-best-practices">
+          <Button variant="primary">Next: SEO Best Practices →</Button>
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <Footer slot="footer" siteName="My Astro Site" />
+</SEOLayout>

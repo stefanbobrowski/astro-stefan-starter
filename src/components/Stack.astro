@@ -1,0 +1,12 @@
+---
+interface Props {
+  gap?: "sm" | "md" | "lg";
+  as?: "div" | "section" | "article";
+}
+
+const { gap = "md", as: Tag = "div" } = Astro.props;
+---
+
+<Tag class={`stack stack--gap-${gap}`}>
+  <slot />
+</Tag>

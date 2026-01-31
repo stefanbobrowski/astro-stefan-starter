@@ -1,0 +1,17 @@
+---
+interface Props {
+  variant?: 'default' | 'elevated' | 'bordered';
+  padding?: 'sm' | 'md' | 'lg';
+  as?: 'div' | 'article' | 'section';
+}
+
+const { 
+  variant = 'default',
+  padding = 'md',
+  as: Tag = 'div'
+} = Astro.props;
+---
+
+<Tag class={`card card--${variant} card--padding-${padding}`}>
+  <slot />
+</Tag>

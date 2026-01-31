@@ -1,0 +1,89 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Card from '@components/Card.astro';
+import Badge from '@components/Badge.astro';
+import Button from '@components/Button.astro';
+
+const posts = [
+  {
+    title: 'Getting Started with Astro',
+    slug: 'getting-started',
+    description: 'Learn how to build fast, content-focused websites with Astro and this starter kit.',
+    date: 'January 28, 2026',
+    author: 'Stefan',
+    readTime: '5 min read',
+    tags: ['Astro', 'Tutorial', 'Getting Started']
+  },
+  {
+    title: 'Design Tokens: A Complete Guide',
+    slug: 'design-tokens',
+    description: 'Understanding and customizing the SCSS design token system in this starter.',
+    date: 'January 29, 2026',
+    author: 'Stefan',
+    readTime: '8 min read',
+    tags: ['Design', 'SCSS', 'Tokens']
+  },
+  {
+    title: 'SEO Best Practices for Astro',
+    slug: 'seo-best-practices',
+    description: 'Optimize your Astro site for search engines with these proven techniques.',
+    date: 'January 30, 2026',
+    author: 'Stefan',
+    readTime: '6 min read',
+    tags: ['SEO', 'Best Practices', 'Performance']
+  }
+];
+---
+
+<BaseLayout
+  title="Blog"
+  description="Articles, tutorials, and insights about building modern web applications with Astro."
+>
+  <article class="prose section-spacing">
+    <div class="text-center">
+      <Badge variant="info">Blog</Badge>
+      <h1 class="page-title mt-4">Latest Articles</h1>
+      <p class="lead mt-4">
+        Tutorials, guides, and insights about modern web development.
+      </p>
+    </div>
+
+    <div class="stack stack--gap-lg mt-10">
+      {posts.map(post => (
+        <Card variant="elevated" padding="lg">
+          <article>
+            <div class="flex gap-2 mb-3">
+              {post.tags.map(tag => (
+                <Badge variant="default">{tag}</Badge>
+              ))}
+            </div>
+            
+            <h2 class="mt-3 mb-3">
+              <a href={`/blog/${post.slug}`} class="link-accent">
+                {post.title}
+              </a>
+            </h2>
+            
+            <p class="text-muted mb-4">
+              {post.description}
+            </p>
+            
+            <div class="flex justify-space-between align-center gap-3">
+              <div class="flex gap-4 text-sm text-muted">
+                <span>{post.author}</span>
+                <span>•</span>
+                <span>{post.date}</span>
+                <span>•</span>
+                <span>{post.readTime}</span>
+              </div>
+              
+              <a href={`/blog/${post.slug}`}>
+                <Button variant="outline">Read More</Button>
+              </a>
+            </div>
+          </article>
+        </Card>
+      ))}
+    </div>
+  </article>
+</BaseLayout>

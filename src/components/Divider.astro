@@ -1,0 +1,13 @@
+---
+interface Props {
+  spacing?: 'sm' | 'md' | 'lg';
+  orientation?: 'horizontal' | 'vertical';
+}
+
+const { 
+  spacing = 'md',
+  orientation = 'horizontal'
+} = Astro.props;
+---
+
+<hr class={`divider divider--${orientation} divider--spacing-${spacing}`} />

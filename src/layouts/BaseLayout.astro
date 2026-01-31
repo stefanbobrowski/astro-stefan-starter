@@ -1,0 +1,66 @@
+---
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  siteName?: string;
+}
+
+const {
+  title = "My Astro Site",
+  description = "Fast, clean, SEO-first Astro site",
+  image = "/og-image.jpg",
+  siteName = "My Astro Site",
+} = Astro.props;
+
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const fullImageURL = new URL(image, Astro.site || 'http://localhost:4321').href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageURL} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={fullImageURL} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+  </head>
+  <body>
+    <Header siteName={siteName} />
+    
+    <main class="container">
+      <slot />
+    </main>
+    
+    <Footer siteName={siteName} />
+  </body>
+</html>
